@@ -10,7 +10,7 @@ const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  //   const [index, setIndex] = useState(1);
+
   const toRotate = ['Front End Developer', 'Game Developer', 'UI/UX Designer'];
   const period = 2000;
 
@@ -22,6 +22,7 @@ const Banner = () => {
     return () => {
       clearInterval(ticker);
     };
+    // eslint-disable-next-line
   }, [text]);
 
   const tick = () => {
@@ -39,16 +40,14 @@ const Banner = () => {
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      //   setIndex((prevIndex) => prevIndex - 1);
+
       setDelta(period);
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      //   setIndex(1);
+
       setDelta(500);
-    } //else {
-    //   setIndex((prevIndex) => prevIndex + 1);
-    // }
+    }
   };
 
   return (
@@ -65,14 +64,7 @@ const Banner = () => {
                 >
                   <span className='tagline'>Welcome to my Portfolio</span>
                   <h1>
-                    {`Hi! I'm Nam`}{' '}
-                    {/* <span
-                className='txt-rotate'
-                dataPeriod='1000'
-                data-rotate='[ "Front End Developer", "Game Developer", "UI/UX Designer" ]'
-              > */}
-                    <span className='wrap'>{text}</span>
-                    {/* </span> */}
+                    {`Hi! I'm Nam`} <span className='wrap'>{text}</span>
                   </h1>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
