@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Flex, Box, Image, Link, Text, Button } from '@chakra-ui/react';
+import { Flex, Box, Image, Link, Container, Button } from '@chakra-ui/react';
 import logo from '../../assets/img/logo.svg';
 import navIcon1 from '../../assets/img/nav-icon1.svg';
 import navIcon2 from '../../assets/img/nav-icon2.svg';
